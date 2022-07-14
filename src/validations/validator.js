@@ -44,4 +44,11 @@ const isValidPassword = function(value) {
     return true
 }
 
-module.exports = {isValid, isValidBody, isValidName, isValidEmail, isValidNumber, isValidPassword }
+
+
+const isValidobjectId = (objectId) => {
+    return mongoose.Types.ObjectId.isValid(objectId)
+}
+
+
+module.exports = {isValid, isValidBody, isValidName, isValidEmail, isValidNumber, isValidPassword , isValidobjectId}

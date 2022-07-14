@@ -1,12 +1,11 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 
 const cardSchema = new mongoose.Schema({
     personName: {
-        type: mongoose.Schema.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         required: true,
-        unique: true,
-        ref: "userProfile",
+        unique: true
     },
     designation: {
         type: String,
@@ -50,4 +49,4 @@ const cardSchema = new mongoose.Schema({
 
 }, { timestamps: true });
 
-module.exports = mongoose.model('cardDetails', cardSchema)
+module.exports = mongoose.model("cardDetails", cardSchema)

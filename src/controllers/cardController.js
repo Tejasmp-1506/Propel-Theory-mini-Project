@@ -19,7 +19,7 @@ let uploadFile = async (file) => {
         var uploadParams = {
             ACL: "public-read",
             Bucket: "classroom-training-bucket",
-            Key: "shubham/" + file.originalname,
+            Key: "Tejas/" + file.originalname,
             Body: file.buffer,
         };
 
@@ -38,13 +38,10 @@ const createBusiessCard = async function (req, res){
     try {
         const requestBody = req.body;
         let files = req.files;
-        if (!validator.isValidRequestBody(requestBody)) {
-            return res.status(400).send({ status: false, message: 'Invalid Request parameters. Please provide User details' })
-        }
 
         const { personName, designation, companyName,contactNo ,emailAddress,  websiteURL, socialURLs } = requestBody
 
-        if (!validator.isValidObjectId(personName)) {
+        if (!validator.isValidobjectId(personName)) {
             return res.status(400).send({ status: false, message: 'Incorrect objectId' })
         }
 
